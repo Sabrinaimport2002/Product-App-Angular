@@ -16,10 +16,12 @@ export class DepartmentService {
 
   constructor() { }
 
+  //função para retornar os departamentos
   getDepartments(): Department[]{
     return this.departments;
   }
 
+  //função para adicionar os departamentos
   addDepartments(d: Department){
     this.departments.push({...d, id: this.nextID++});
     console.log(this.departments);

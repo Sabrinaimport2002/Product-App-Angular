@@ -19,7 +19,8 @@ export class ProductService {
   private nextID: number = 0;
   onNewProduct: EventEmitter<Product> = new EventEmitter<Product>();
 
-  constructor(private departmentService: DepartmentService) {
+  constructor(private departmentService: DepartmentService //injetando serviço dentro de serviço
+    ){
     for(let p of this.dataFromServer){
       this.products.push({
         id: p.id,

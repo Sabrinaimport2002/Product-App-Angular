@@ -16,7 +16,7 @@ export class DepartmentFormComponent implements OnInit {
   }
 
   save(){
-    //adiciona novo departamento
+    //adiciona novo departamento a partir da função no serviço 
     this.departmentService.addDepartments({name: this.depName });
     this.clear();
   }
